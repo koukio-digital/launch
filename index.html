@@ -176,7 +176,7 @@
         <p id="message" style="color: green; display: none;">Thank you! We will notify you.</p>
     </div>
     <div class="social-icons">
-        <p id="visitorCount">Visitors: Loading...</p>
+      <!--  <p id="visitorCount">: Loading...</p>  -->
       <!--  <a href="#">&#xf09a;</a> <!-- Facebook 
         <a href="#">&#xf099;</a> <!-- Twitter 
         <a href="#">&#xf16d;</a> <!-- Instagram -->
@@ -214,14 +214,14 @@
             }
         });
          // Function to update visitor count
-function updateVisitorCount() {
-    let count = localStorage.getItem("visitorCount") || 0;
-    count++;
-    localStorage.setItem("visitorCount", count);
-    document.getElementById("visitorCount").innerText = `Visitors: ${count}`;
-}
+//function updateVisitorCount() {
+    //let count = localStorage.getItem("visitorCount") || 0;
+  //  count++;
+   // localStorage.setItem("visitorCount", count);
+   // document.getElementById("visitorCount").innerText = `Visitors: ${count}`;
+//}
 
-updateVisitorCount();
+//updateVisitorCount();
     </script>
    
 
