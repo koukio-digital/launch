@@ -165,7 +165,7 @@
 <body>
     <img src="Capturefinal-removebg-preview.png" alt="Growcell Logo" class="logo">
     <h1>We're Launching Soon!</h1>
-    <h2>Website goes live on February 26, 2025, at 11 AM</h2>
+    <h2>Website goes live on February 26, 2025, at 11:59 PM</h2>
     <div class="card">
         <h2>Countdown</h2>
         <p class="countdown" id="countdown"></p>
@@ -183,7 +183,7 @@
     </div>
     <script>
         function updateCountdown() {
-            const targetTime = new Date("February 26, 2025 11:00:00").getTime();
+            const targetTime = new Date("February 26, 2025 23:59:00").getTime();
             setInterval(() => {
                 const now = new Date().getTime();
                 const timeLeft = targetTime - now;
