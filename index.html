@@ -230,7 +230,6 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -260,14 +259,20 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 20px;
+            max-width: 90%;
         }
         .gear {
             font-size: 80px;
             animation: spin 3s linear infinite;
         }
-         .logo {
+        .logo {
             width: 200px;
+            max-width: 80%;
             margin-bottom: 20px;
+        }
+        h1, p {
+            max-width: 90%;
         }
         @keyframes spin {
             0% { transform: rotate(0deg); }
@@ -289,6 +294,20 @@
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
+        @media (max-width: 600px) {
+            .gear {
+                font-size: 50px;
+            }
+            .logo {
+                width: 150px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -300,4 +319,5 @@
     </div>
 </body>
 </html>
+
 
