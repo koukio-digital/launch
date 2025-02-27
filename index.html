@@ -105,30 +105,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
+    <title>Growcell IT Architect</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: linear-gradient(to right, #4a90e2, #8e44ad);
-            color: white;
-            height: 100vh;
+            margin: 0;
+            padding: 0;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: 100vh;
+            background: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+            flex-direction: column;
         }
-        .logo {
-            width: 200px;
-            margin-bottom: 20px;
+        .container {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            max-width: 90%;
         }
-        
         .gear {
-            font-size: 80px;
+            font-size: 100px;
             animation: spin 3s linear infinite;
         }
         .logo {
-            width: 200px;
+            width: 250px;
             max-width: 80%;
             margin-bottom: 20px;
         }
@@ -143,10 +150,6 @@
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
-        @keyframes backgroundAnimation {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
-        }
         .fade-in-text {
             opacity: 0;
             animation: textFadeIn 3s forwards 1s;
@@ -155,7 +158,35 @@
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
-        @media (max-width: 600px) {
+        @media (max-width: 1024px) {
+            .gear {
+                font-size: 80px;
+            }
+            .logo {
+                width: 200px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 768px) {
+            .gear {
+                font-size: 70px;
+            }
+            .logo {
+                width: 180px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+        @media (max-width: 480px) {
             .gear {
                 font-size: 50px;
             }
@@ -168,110 +199,15 @@
             p {
                 font-size: 14px;
             }
-        .card {
-            background: white;
-            color: black;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
         }
-        .countdown {
-            font-size: 24px;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-        .input-container {
-            margin: 10px 0;
-        }
-        .input-container input {
-            padding: 10px;
-            width: 200px;
-            margin-right: 10px;
-        }
-        .button {
-            background: #4a90e2;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .social-icons {
-            margin-top: 10px;
-        }
-        .social-icons a {
-            margin: 0 10px;
-            color: white;
-            font-size: 20px;
-            text-decoration: none;
-        } -->
     </style>
 </head>
 <body>
-    <img src="Capturefinal-removebg-preview.png" alt="Growcell Logo" class="logo">
-    <h1>We're Launching Soon!</h1>
-    <h2>Website goes live on February 26, 2025, at 11:59 PM</h2>
     <div class="container">
-       <div class="gear">⚙️</div>
+          <img src="Capturefinal-removebg-preview.png" alt="Growcell Logo" class="logo">
+        <div class="gear">⚙️</div>
         <h1 class="fade-in-text">Website Under Maintenance</h1>
         <p class="fade-in-text">We are currently working on some improvements. Please check back soon!</p>
     </div>
-    <div class="social-icons">
-      <!--  <p id="visitorCount">: Loading...</p>  -->
-      <!--  <a href="#">&#xf09a;</a> <!-- Facebook 
-        <a href="#">&#xf099;</a> <!-- Twitter 
-        <a href="#">&#xf16d;</a> <!-- Instagram -->
-  </div>
-    <script>
-        function updateCountdown() {
-            const targetTime = new Date("February 26, 2025 23:59:00").getTime();
-            setInterval(() => {
-                const now = new Date().getTime();
-                const timeLeft = targetTime - now;
-                if (timeLeft > 0) {
-                    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
-                    const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
-                    const seconds = Math.floor((timeLeft / 1000) % 60);
-                    document.getElementById("countdown").innerText = `${days}d ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-                } else {
-                    document.getElementById("countdown").innerText = "00:00:00";
-                }
-            }, 1000);
-        }
-        updateCountdown();
-
-        document.getElementById("notifyButton").addEventListener("click", function() {
-            const email = document.getElementById("email").value;
-            const message = document.getElementById("message");
-            if (email.includes("@") && email.includes(".")) {
-                message.style.display = "block";
-                message.style.color = "green";
-                message.innerText = "Thank you! We will notify you.";
-            } else {
-                message.style.display = "block";
-                message.style.color = "red";
-                message.innerText = "Please enter a valid email.";
-            }
-        });
-         // Function to update visitor count
-//function updateVisitorCount() {
-    //let count = localStorage.getItem("visitorCount") || 0;
-  //  count++;
-   // localStorage.setItem("visitorCount", count);
-   // document.getElementById("visitorCount").innerText = `Visitors: ${count}`;
-//}
-
-//updateVisitorCount();
-    </script>
-   
-
 </body>
-</html>  
-
-
-
-
-
-
+</html>
