@@ -100,7 +100,7 @@
 </html>
 -->
 
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -180,7 +180,7 @@
       <!--  <a href="#">&#xf09a;</a> <!-- Facebook 
         <a href="#">&#xf099;</a> <!-- Twitter 
         <a href="#">&#xf16d;</a> <!-- Instagram -->
-    </div>
+ <!--   </div>
     <script>
         function updateCountdown() {
             const targetTime = new Date("February 26, 2025 23:59:00").getTime();
@@ -226,4 +226,74 @@
    
 
 </body>
+</html>  -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Maintenance</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(-45deg, #ADFF2F, #8A2BE2);
+            background-size: 400% 400%;
+            animation: backgroundAnimation 6s infinite alternate ease-in-out;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+            flex-direction: column;
+        }
+        .container {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .gear {
+            font-size: 80px;
+            animation: spin 3s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        .fade-in-text {
+            opacity: 0;
+            animation: textFadeIn 3s forwards 1s;
+        }
+        @keyframes textFadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+          <img src="Capturefinal-removebg-preview.png" alt="Growcell Logo" class="logo">
+        <div class="gear">⚙️</div>
+        <h1 class="fade-in-text">Website Under Maintenance</h1>
+        <p class="fade-in-text">We are currently working on some improvements. Please check back soon!</p>
+    </div>
+</body>
 </html>
+
